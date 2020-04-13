@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width, initial-scale=1.0">
+       
+        <title>javascript: asimetricne operacije</title>
+         </head>
+        
+        
+        <body>
+            <input type="text" id="x"/><br/><br/>
+            <input type="text" id="y"/><br/><br/>
+            
+        <select id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="X">X</option>
+        </select>
+        
+        <button onclick="calc();">=</button>
+        <input type="text" id="result"/>
+        <script>
+            
+            function calc()
+            {
+                var x = parseFloat(document.getElementById('x').value);
+                var y= parseFloat(document.getElementById('y').value);
+                
+                var oper = document.getElementById('operators').value;
+                
+                if(oper === '+')
+                {
+                    document.getElementById('result').value = x+y;
+                }
+                
+                if(oper === '-')
+                {
+                    document.getElementById('result').value = x-y;
+                }
+                
+                if(oper === '/')
+                {
+                    document.getElementById('result').value = x/y;
+                }
+                
+                if(oper === 'X')
+                {
+                    document.getElementById('result').value =x*y;
+                }
+            }
+            
+        </script>
+    
+        
+       
+        
+    </body>
+</html>
